@@ -1,0 +1,33 @@
+threads share address space.
+processes share files,queues, message pipelines but not address space.
+
+memory leak effects threads not processes
+
+p1=multiprocessing.process()
+p1.start
+
+lock.acquire()
+lock.release()
+
+pools - map() to multiple processors and reduce the results with join()
+
+
+sharing data between processes with queues:
+queue is shared memory -https://www.youtube.com/watch?v=sp7EhjLkFY4
+
+q=multiprocesing.Queue()
+p=multiprocessing.process(target=function, args=(function agrs,q))
+
+if queue is empty then q.get()
+
+special varible: __name__  is sent to main when a program starts
+'main' is the name of the program that calls all other modules.
+checks if file is being run directly or is it being imported.
+
+underscores in python:
+singel _ means - hint that name should be treated as private - not mandated by python interpreter but programmers use it for KT.
+
+double underscore (dunder) __baz - creates a vairiable with classname followed by dunder .. _classname_baz.. this wil help with naming colision between classes
+
+
+
